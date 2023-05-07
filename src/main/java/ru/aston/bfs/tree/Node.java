@@ -45,8 +45,9 @@ public class Node<T> {
     public static void main(String[] args) {
         var root = new Node<Integer>(10);
         root.addChild(15);
-        root.addChild(10);
-        System.out.println(root);
+        root.addChild(22);
+        var mayBeNode = breadthFirstSearch(22, root);
+        mayBeNode.ifPresent(System.out::println);
     }
 
 }
