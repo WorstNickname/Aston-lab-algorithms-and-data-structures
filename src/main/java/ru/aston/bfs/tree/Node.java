@@ -42,12 +42,4 @@ public class Node<T> {
         return Optional.empty();
     }
 
-    public static void main(String[] args) {
-        var root = new Node<Integer>(10);
-        root.addChild(15);
-        root.addChild(22);
-        var mayBeNode = breadthFirstSearch(22, root);
-        mayBeNode.ifPresent(System.out::println);
-    }
-
 }
